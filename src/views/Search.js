@@ -17,6 +17,8 @@ import './Search.css';
 export function SearchView() {
     const { navigate, setStreamUrl, setStreamData } = useMovie();
 
+    // TODO non-spaghetti paths
+    // TODO use progress store hook
     const history = useHistory();
     const routeMatch = useRouteMatch('/:type');
     const type = routeMatch?.params?.type;

@@ -7,10 +7,10 @@ import './VideoElement.css'
 // streamUrl: string
 // loading: boolean
 // setProgress: (event: NativeEvent) => void
-// videoRef: useRef
 // startTime: number
-export function VideoElement({ streamUrl, loading, setProgress, videoRef, startTime }) {
+export function VideoElement({ streamUrl, loading, setProgress, startTime }) {
     const [error, setError] = React.useState(false);
+    const videoRef = React.useRef(null);
 
     function onLoad() {
         if (startTime)
